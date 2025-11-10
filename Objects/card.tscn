@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtvt432xk124c"]
+
+[ext_resource type="Texture2D" uid="uid://bnkh1sdiqxsw0" path="res://Sprites/fisikali fit.png" id="1_dk6je"]
+[ext_resource type="Script" uid="uid://bw5s56s7a2byq" path="res://Objects/card.gd" id="1_plkrm"]
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_plkrm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.25, 0.35541284)
+texture = ExtResource("1_dk6je")
