@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yy27pxwl3gmk"
-path="res://.godot/imported/gbffill.png-820055b77f9676129a893acbe3243cc5.ctex"
+uid="uid://bnup4vrjjmkop"
+path="res://.godot/imported/FamilyPixel2.png-47b2ab8845f2ce0ffa766838b8155719.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/gbffill.png"
-dest_files=["res://.godot/imported/gbffill.png-820055b77f9676129a893acbe3243cc5.ctex"]
+source_file="res://Sprites/einsätze/FamilyPixel2.png"
+dest_files=["res://.godot/imported/FamilyPixel2.png-47b2ab8845f2ce0ffa766838b8155719.ctex"]
 
 [params]
 
