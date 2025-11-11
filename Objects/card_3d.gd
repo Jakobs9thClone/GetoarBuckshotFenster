@@ -45,20 +45,43 @@ func _process(delta: float) -> void:
 		if rightCard.hasBeenTurned == true:
 			hasTurnedNeighbours = true
 
-func getAmountOfTurnedNeighbours() -> int:
-	var temp = 0
+func getAmountOfTurnedNeighbours() -> Vector3i:
+	var temp = Vector3i(0,0,0)
+	var max = 0
+	var min = 999
 	if topCard != null:
 		if topCard.hasBeenTurned == true:
-			temp += 1
+			temp.x += 1
+			if topCard.cardValue > max:
+				max = topCard.cardValue
+			if topCard.cardValue < min:
+				min = topCard.cardValue
+	
 	if bottomCard != null:
 		if bottomCard.hasBeenTurned == true:
-			temp += 1
+			temp.x += 1
+			if bottomCard.cardValue > max:
+				max = bottomCard.cardValue
+			if bottomCard.cardValue < min:
+				min = bottomCard.cardValue
+	
 	if leftCard != null:
 		if leftCard.hasBeenTurned == true:
-			temp += 1
+			temp.x += 1
+			if leftCard.cardValue > max:
+				min = leftCard.cardValue
+			if leftCard.cardValue < min:
+				min = leftCard.cardValue
+	
 	if rightCard != null:
 		if rightCard.hasBeenTurned == true:
-			temp += 1
+			temp.x += 1
+			if rightCard.cardValue > max:
+				max = rightCard.cardValue
+			if rightCard.cardValue < min:
+				max = rightCard.cardValue
+	temp.y = min
+	temp.z = max
 	return temp
 
 func reset() -> void:
@@ -66,11 +89,29 @@ func reset() -> void:
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if event.is_action_pressed("Mouse Left"):
-			pass
+
 		if mouseIsOn and not hasBeenTurned:
 			hasBeenTurned = true
 			animation_player.play("flip")
+			var numN = getAmountOfTurnedNeighbours()
+			if event.is_action_pressed("Mouse Left"):
+				print(numN)
+				if numN.x == 1:
+					if cardValue >= numN.z:
+						reset()
+						print("verloren du Pisser")
+				if numN.x >= 2:
+					if cardValue <= numN.z and cardValue >= numN.y:
+						print("innerhalb du kleiner Peach")
+						
+			if event.is_action_pressed("Mouse Right"):
+				if numN.x == 1:
+					if cardValue <= numN.z:
+						reset()
+						print("verloren weil kleiner")
+					if numN.x >= 2:
+						if cardValue >= numN.z and cardValue <= numN.y:
+							print("außerhalb du Pisser")
 	elif event is InputEventMouseMotion:
 		pass
 
