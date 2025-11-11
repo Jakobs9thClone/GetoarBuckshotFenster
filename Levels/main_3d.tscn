@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://ebg6wr82xj1v"]
 
 [ext_resource type="PackedScene" uid="uid://crvs8uw1ygngm" path="res://Objects/card3D.tscn" id="1_jp5bc"]
-[ext_resource type="ArrayMesh" uid="uid://dc5invm4knum0" path="res://3dObj/scene ref.obj" id="2_jp5bc"]
+[ext_resource type="ArrayMesh" uid="uid://nwtdh30gfkjx" path="res://3dObj/scene ref.obj" id="2_jp5bc"]
 
 [sub_resource type="Animation" id="Animation_jp5bc"]
 length = 0.001
@@ -81,7 +81,7 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.3)
+transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.65)
 fov = 23.0
 
 [node name="SceneRef" type="MeshInstance3D" parent="."]
