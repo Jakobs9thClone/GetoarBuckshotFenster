@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bixhcs3i2qrrr" path="res://Objects/card_3d.gd" id="1_6vkeq"]
 [ext_resource type="Texture2D" uid="uid://bttt62w8fj26l" path="res://Sprites/karten/Herz10.png" id="1_r3sfb"]
-[ext_resource type="Texture2D" uid="uid://bnkh1sdiqxsw0" path="res://Sprites/karten/fisikali fit.png" id="3_dr2mf"]
+[ext_resource type="Texture2D" uid="uid://diaq7odhcpw8c" path="res://Sprites/karten/RückseiteKarten.png" id="3_dr2mf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dr2mf"]
 size = Vector3(0.50354004, 0.016601563, 0.79437256)
@@ -83,8 +83,7 @@ texture_filter = 0
 texture = ExtResource("1_r3sfb")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
-transform = Transform3D(1.6841555, 0, 0, 0, 2.5076582, 0, 0, 0, 0.99999994, 0, 1.5455592e-10, 0.003535822)
-pixel_size = 0.0002
+transform = Transform3D(0.39291173, 0, 0, 0, 0.3962937, -3.5527137e-15, 0, 0, 1, 0.003705054, -0.0116256615, 0.01844871)
 texture_filter = 0
 texture = ExtResource("3_dr2mf")
 
