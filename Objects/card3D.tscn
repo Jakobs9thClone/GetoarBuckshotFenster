@@ -1,10 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://crvs8uw1ygngm"]
+[gd_scene load_steps=4 format=3 uid="uid://crvs8uw1ygngm"]
 
+[ext_resource type="Script" uid="uid://bixhcs3i2qrrr" path="res://Objects/card_3d.gd" id="1_6vkeq"]
 [ext_resource type="Texture2D" uid="uid://bttt62w8fj26l" path="res://Sprites/karten/Herz10.png" id="1_r3sfb"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_dr2mf"]
+size = Vector3(0.50354004, 0.016601563, 0.79437256)
+
 [node name="Card" type="Node3D"]
+script = ExtResource("1_6vkeq")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.0046697855, 1.4901161e-08, 0.0019007921)
 texture_filter = 0
 texture = ExtResource("1_r3sfb")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0032348633, -0.0024414063, 0.0050354004)
+shape = SubResource("BoxShape3D_dr2mf")
+
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]
