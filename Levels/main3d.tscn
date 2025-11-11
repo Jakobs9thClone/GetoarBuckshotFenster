@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://chgjtprgra67a"]
+[gd_scene load_steps=7 format=3 uid="uid://chgjtprgra67a"]
 
 [ext_resource type="ArrayMesh" uid="uid://bdlh2fr25fjma" path="res://3dObj/cardref.obj" id="1_ss3q6"]
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
@@ -11,15 +11,30 @@ alpha_antialiasing_mode = 0
 albedo_texture = ExtResource("3_m1evb")
 texture_filter = 0
 
+[sub_resource type="Animation" id="Animation_m1evb"]
+resource_name = "camera_turn"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sywdn"]
+_data = {
+&"camera_turn": SubResource("Animation_m1evb")
+}
+
 [node name="Main3d" type="Node3D"]
 
 [node name="Cardref" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_ss3q6")
 
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.65)
-fov = 23.0
-
 [node name="Scene" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_m1evb")
 surface_material_override/0 = SubResource("StandardMaterial3D_sywdn")
+
+[node name="camera root" type="Node3D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="camera root"]
+libraries = {
+&"": SubResource("AnimationLibrary_sywdn")
+}
+
+[node name="Camera3D" type="Camera3D" parent="camera root"]
+transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.65)
+fov = 23.0
