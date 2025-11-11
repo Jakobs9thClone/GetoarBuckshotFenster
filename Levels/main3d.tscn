@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://chgjtprgra67a"]
+[gd_scene load_steps=9 format=3 uid="uid://chgjtprgra67a"]
 
 [ext_resource type="ArrayMesh" uid="uid://bdlh2fr25fjma" path="res://3dObj/cardref.obj" id="1_ss3q6"]
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
@@ -13,9 +13,55 @@ texture_filter = 0
 
 [sub_resource type="Animation" id="Animation_m1evb"]
 resource_name = "camera_turn"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.1415927, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_sywdn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_inedi"]
+resource_name = "camera_return"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 3.1415927, 0), Vector3(0, 6.2831855, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sywdn"]
 _data = {
+&"RESET": SubResource("Animation_sywdn"),
+&"camera_return": SubResource("Animation_inedi"),
 &"camera_turn": SubResource("Animation_m1evb")
 }
 
