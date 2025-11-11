@@ -1,9 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://chgjtprgra67a"]
+[gd_scene load_steps=3 format=3 uid="uid://chgjtprgra67a"]
 
-[ext_resource type="ArrayMesh" uid="uid://nwtdh30gfkjx" path="res://3dObj/scene ref.obj" id="1_yvjfh"]
+[ext_resource type="ArrayMesh" uid="uid://bdlh2fr25fjma" path="res://3dObj/cardref.obj" id="1_ss3q6"]
+[ext_resource type="ArrayMesh" uid="uid://c3tq0cah4uaa2" path="res://3dObj/scene.obj" id="2_m1evb"]
 
 [node name="Main3d" type="Node3D"]
 
-[node name="SceneRef" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35358918, 0, 0.26271415)
-mesh = ExtResource("1_yvjfh")
+[node name="Cardref" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ss3q6")
+
+[node name="Scene" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_m1evb")
