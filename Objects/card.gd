@@ -23,31 +23,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if topCard.mouseIsOn == true:
-		print("otherCard active")
-	#print(otherVar.isActive)
-	#var otherScript = otherCard.get_script()
-	#if otherScript.isActive == true:
-	#	print("collision with other object")
+		pass#print("otherCard active")
 
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
-		print("Mouse Click/Unclick at: ", event.position)
+		pass #print("Mouse Click/Unclick at: ", event.position)
 	elif event is InputEventMouseMotion:
 		#print("Mouse Motion at: ", event.position)
 		pass
 
-	# Print the size of the viewport.
-	#print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
-
 func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("area entered"); # Replace with function body.
-
-func _on_area_2d_mouse_entered() -> void:
-	mouseIsOn = true; # Replace with function body.
-
-func _on_area_2d_mouse_shape_entered(shape_idx: int) -> void:
-	pass # Replace with function body.
+	pass #print("area entered"); # Replace with function body.
 
 func _on_area_2d_mouse_exited() -> void:
 	mouseIsOn = false # Replace with function body.
