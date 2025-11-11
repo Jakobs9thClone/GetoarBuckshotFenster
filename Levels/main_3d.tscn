@@ -1,88 +1,30 @@
-[gd_scene load_steps=7 format=3 uid="uid://ebg6wr82xj1v"]
+<<<<<<< Updated upstream
+[gd_scene load_steps=2 format=3 uid="uid://ebg6wr82xj1v"]
 
 [ext_resource type="PackedScene" uid="uid://crvs8uw1ygngm" path="res://Objects/card3D.tscn" id="1_jp5bc"]
-[ext_resource type="ArrayMesh" uid="uid://nwtdh30gfkjx" path="res://3dObj/scene ref.obj" id="2_jp5bc"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://ebg6wr82xj1v"]
 
-[sub_resource type="Animation" id="Animation_jp5bc"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0.00036323443, -1.4901161e-08, 0.0012140721)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_dh8iw"]
-resource_name = "flip"
-length = 0.04
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.04),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0, 3.1415927)]
-}
-
-[sub_resource type="Animation" id="Animation_gmn50"]
-resource_name = "hover"
-length = 0.04
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.04),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 0.05, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nu8qf"]
-_data = {
-&"RESET": SubResource("Animation_jp5bc"),
-&"flip": SubResource("Animation_dh8iw"),
-&"hover": SubResource("Animation_gmn50")
-}
+[ext_resource type="PackedScene" uid="uid://crvs8uw1ygngm" path="res://Objects/card3D.tscn" id="1_jp5bc"]
+[ext_resource type="PackedScene" uid="uid://1s0obfi1q58c" path="res://Objects/table.tscn" id="2_dh8iw"]
+>>>>>>> Stashed changes
 
 [node name="Main3D" type="Node3D"]
 
 [node name="Card" parent="." instance=ExtResource("1_jp5bc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00036323443, -1.4901161e-08, 0.0012140721)
-visible = false
+<<<<<<< Updated upstream
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Card"]
-libraries = {
-&"": SubResource("AnimationLibrary_nu8qf")
-}
+[node name="Card2" parent="." instance=ExtResource("1_jp5bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64685017, 0, 0)
+
+[node name="Card3" parent="." instance=ExtResource("1_jp5bc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6554064, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.65)
-fov = 23.0
+transform = Transform3D(1, 0, 0, 0, 0.80910933, 0.58765817, 0, -0.58765817, 0.80910933, 0, 1.7611649, 1.5927416)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76278806, 0, 0.8370296)
 
-[node name="SceneRef" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_jp5bc")
+[node name="Table" parent="." instance=ExtResource("2_dh8iw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+>>>>>>> Stashed changes
