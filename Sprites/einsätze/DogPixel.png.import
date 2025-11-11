@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bnkh1sdiqxsw0"
-path="res://.godot/imported/fisikali fit.png-e598021385dc5d1673a8008d0d45cadb.ctex"
+uid="uid://slawgodusi7s"
+path="res://.godot/imported/DogPixel.png-057c3e1844f5a4ac2f6e82b1aa138534.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/fisikali fit.png"
-dest_files=["res://.godot/imported/fisikali fit.png-e598021385dc5d1673a8008d0d45cadb.ctex"]
+source_file="res://Sprites/einsätze/DogPixel.png"
+dest_files=["res://.godot/imported/DogPixel.png-057c3e1844f5a4ac2f6e82b1aa138534.ctex"]
 
 [params]
 

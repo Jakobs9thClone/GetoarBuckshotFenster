@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://6pedjstpt4oe"
-path="res://.godot/imported/fillnb.png-71809f66846a02cddfe9c250479d73df.ctex"
+path="res://.godot/imported/fillnb.png-78b51202b81981bc28c94263ed91bc62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/fillnb.png"
-dest_files=["res://.godot/imported/fillnb.png-71809f66846a02cddfe9c250479d73df.ctex"]
+source_file="res://Sprites/title/fillnb.png"
+dest_files=["res://.godot/imported/fillnb.png-78b51202b81981bc28c94263ed91bc62.ctex"]
 
 [params]
 
