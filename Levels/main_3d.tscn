@@ -1,10 +1,18 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://ebg6wr82xj1v"]
 
 [ext_resource type="PackedScene" uid="uid://crvs8uw1ygngm" path="res://Objects/card3D.tscn" id="1_jp5bc"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://ebg6wr82xj1v"]
+
+[ext_resource type="PackedScene" uid="uid://crvs8uw1ygngm" path="res://Objects/card3D.tscn" id="1_jp5bc"]
+[ext_resource type="PackedScene" uid="uid://1s0obfi1q58c" path="res://Objects/table.tscn" id="2_dh8iw"]
+>>>>>>> Stashed changes
 
 [node name="Main3D" type="Node3D"]
 
 [node name="Card" parent="." instance=ExtResource("1_jp5bc")]
+<<<<<<< Updated upstream
 
 [node name="Card2" parent="." instance=ExtResource("1_jp5bc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64685017, 0, 0)
@@ -14,3 +22,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6554064, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.80910933, 0.58765817, 0, -0.58765817, 0.80910933, 0, 1.7611649, 1.5927416)
+=======
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.76278806, 0, 0.8370296)
+
+[node name="Table" parent="." instance=ExtResource("2_dh8iw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
+>>>>>>> Stashed changes

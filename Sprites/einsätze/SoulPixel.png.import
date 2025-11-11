@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyle3ys7lyw44"
-path="res://.godot/imported/DogPixel.png-057c3e1844f5a4ac2f6e82b1aa138534.ctex"
+uid="uid://cr6xth4wmqeyk"
+path="res://.godot/imported/SoulPixel.png-f9d662fece9c83a2404fad64c882d5d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/einsätze/DogPixel.png"
-dest_files=["res://.godot/imported/DogPixel.png-057c3e1844f5a4ac2f6e82b1aa138534.ctex"]
+source_file="res://Sprites/einsätze/SoulPixel.png"
+dest_files=["res://.godot/imported/SoulPixel.png-f9d662fece9c83a2404fad64c882d5d0.ctex"]
 
 [params]
 
