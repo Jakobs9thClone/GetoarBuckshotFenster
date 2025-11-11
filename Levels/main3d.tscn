@@ -84,8 +84,8 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="camera root"]
-transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.65)
-fov = 23.0
+transform = Transform3D(1, 0, 0, 0, 0.26178488, 0.9651263, 0, -0.9651263, 0.26178488, 0.0033798218, 1.4972584, 0.22704738)
+fov = 57.6
 
 [node name="Fenster" parent="." instance=ExtResource("3_sywdn")]
 
