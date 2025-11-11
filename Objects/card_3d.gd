@@ -1,4 +1,4 @@
-extends Node2D
+extends Node3D
 
 @export var isActive = false
 @export var isCorner = true
@@ -10,10 +10,13 @@ extends Node2D
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
 
+var hasBeenTurned = false;
+
 var mouseIsOn = false;
 
 var otherVar
 
+@onready var animation_player = $AnimationPlayer
 
 func _ready() -> void:
 	pass
@@ -22,7 +25,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if topCard.mouseIsOn == true:
+	if mouseIsOn == true:
 		print("otherCard active")
 	#print(otherVar.isActive)
 	#var otherScript = otherCard.get_script()
@@ -32,6 +35,9 @@ func _process(delta: float) -> void:
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
+		if mouseIsOn and not hasBeenTurned:
+			hasBeenTurned = true
+			animation_player.play("flip")
 		print("Mouse Click/Unclick at: ", event.position)
 	elif event is InputEventMouseMotion:
 		#print("Mouse Motion at: ", event.position)
@@ -40,14 +46,13 @@ func _input(event):
 	# Print the size of the viewport.
 	#print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
 
-func _on_area_2d_area_entered(area: Area2D) -> void:
-	print("area entered"); # Replace with function body.
+func _on_area_3d_mouse_entered() -> void:
+	if not hasBeenTurned:
+		animation_player.play("hover")
+		mouseIsOn = true; # Replace with function body.
 
-func _on_area_2d_mouse_entered() -> void:
-	mouseIsOn = true; # Replace with function body.
 
-func _on_area_2d_mouse_shape_entered(shape_idx: int) -> void:
-	pass # Replace with function body.
-
-func _on_area_2d_mouse_exited() -> void:
-	mouseIsOn = false # Replace with function body.
+func _on_area_3d_mouse_exited() -> void:
+	if not hasBeenTurned:
+		animation_player.play("hover_down")
+		mouseIsOn = false # Replace with function body.

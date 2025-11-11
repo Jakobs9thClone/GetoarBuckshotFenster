@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b3hkucybj16vm"
-path.s3tc="res://.godot/imported/tisch.png-78d890cc5c7ca62ace43e6de242fb882.s3tc.ctex"
+uid="uid://bttt62w8fj26l"
+path.s3tc="res://.godot/imported/Herz10.png-6ffed6538e0fdb603a8ca32846c9ba08.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Sprites/scene/tisch.png"
-dest_files=["res://.godot/imported/tisch.png-78d890cc5c7ca62ace43e6de242fb882.s3tc.ctex"]
+source_file="res://Sprites/karten/Herz10.png"
+dest_files=["res://.godot/imported/Herz10.png-6ffed6538e0fdb603a8ca32846c9ba08.s3tc.ctex"]
 
 [params]
 

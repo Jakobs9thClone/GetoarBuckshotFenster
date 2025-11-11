@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Getoar_Buckshot_Fenster"
-run/main_scene="uid://c7lu4slnliftu"
+run/main_scene="uid://bc7efecqy21bq"
 config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://vcesn58ykdlc"
+config/windows_native_icon="res://Assets/icon.ico"
