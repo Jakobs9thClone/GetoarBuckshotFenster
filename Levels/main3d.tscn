@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=10 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
@@ -65,6 +65,11 @@ _data = {
 &"camera_turn": SubResource("Animation_m1evb")
 }
 
+[sub_resource type="Environment" id="Environment_m1evb"]
+background_energy_multiplier = 0.0
+ambient_light_source = 2
+ambient_light_color = Color(1, 1, 1, 1)
+
 [node name="Main3d" type="Node3D"]
 
 [node name="Scene" type="MeshInstance3D" parent="."]
@@ -83,3 +88,6 @@ transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.925
 fov = 23.0
 
 [node name="Fenster" parent="." instance=ExtResource("3_sywdn")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_m1evb")
