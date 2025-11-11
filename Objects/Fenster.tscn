@@ -4,65 +4,130 @@
 
 [node name="Fenster" type="Node3D"]
 
-[node name="Card" parent="." instance=ExtResource("1_e3lpq")]
+[node name="40" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, -0.43033576)
+leftCard = NodePath("../30")
+rightCard = NodePath("../41")
 
-[node name="Card16" parent="." instance=ExtResource("1_e3lpq")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, -0.20233889)
+[node name="41" parent="." node_paths=PackedStringArray("topCard", "bottomCard") instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, -0.21411632)
+isCorner = false
+topCard = NodePath("../40")
+bottomCard = NodePath("../42")
 
-[node name="Card17" parent="." instance=ExtResource("1_e3lpq")]
+[node name="43" parent="." node_paths=PackedStringArray("topCard", "bottomCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, 0.21623743)
+isCorner = false
+topCard = NodePath("../42")
+bottomCard = NodePath("../44")
 
-[node name="Card18" parent="." instance=ExtResource("1_e3lpq")]
+[node name="21" parent="." node_paths=PackedStringArray("topCard", "bottomCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.00530681, 0.011291057, -0.21893166)
+isCorner = false
+topCard = NodePath("../20")
+bottomCard = NodePath("../22")
 
-[node name="Card19" parent="." instance=ExtResource("1_e3lpq")]
+[node name="23" parent="." node_paths=PackedStringArray("topCard", "bottomCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.00530681, 0.011291057, 0.21615577)
+isCorner = false
+topCard = NodePath("../22")
+bottomCard = NodePath("../24")
 
-[node name="Card20" parent="." instance=ExtResource("1_e3lpq")]
+[node name="01" parent="." node_paths=PackedStringArray("topCard", "bottomCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.30957875, 0.011291057, -0.21904592)
+isCorner = false
+topCard = NodePath("../00")
+bottomCard = NodePath("../02")
 
-[node name="Card21" parent="." instance=ExtResource("1_e3lpq")]
+[node name="03" parent="." node_paths=PackedStringArray("topCard", "bottomCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.30957875, 0.011291057, 0.21088073)
+isCorner = false
+topCard = NodePath("../02")
+bottomCard = NodePath("../04")
 
-[node name="Card2" parent="." instance=ExtResource("1_e3lpq")]
+[node name="30" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.16153967, 0.011291057, -0.43033576)
+isCorner = false
+leftCard = NodePath("../20")
+rightCard = NodePath("../40")
 
-[node name="Card3" parent="." instance=ExtResource("1_e3lpq")]
+[node name="20" parent="." node_paths=PackedStringArray("bottomCard", "leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0070497543, 0.011291057, -0.43033576)
+isCorner = false
+bottomCard = NodePath("../21")
+leftCard = NodePath("../10")
+rightCard = NodePath("../30")
 
-[node name="Card4" parent="." instance=ExtResource("1_e3lpq")]
+[node name="10" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15365776, 0.011291057, -0.43033576)
+isCorner = false
+leftCard = NodePath("../00")
+rightCard = NodePath("../20")
 
-[node name="Card5" parent="." instance=ExtResource("1_e3lpq")]
+[node name="00" parent="." node_paths=PackedStringArray("bottomCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.31211928, 0.011291057, -0.43033576)
+bottomCard = NodePath("../01")
+rightCard = NodePath("../10")
 
-[node name="Card6" parent="." instance=ExtResource("1_e3lpq")]
+[node name="42" parent="." node_paths=PackedStringArray("topCard", "bottomCard", "leftCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, 0.00039589405)
+isCorner = false
+topCard = NodePath("../41")
+bottomCard = NodePath("../43")
+leftCard = NodePath("../32")
 
-[node name="Card7" parent="." instance=ExtResource("1_e3lpq")]
+[node name="32" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.16153967, 0.011291057, 0.00039589405)
+isCorner = false
+leftCard = NodePath("../22")
+rightCard = NodePath("../42")
 
-[node name="Card8" parent="." instance=ExtResource("1_e3lpq")]
+[node name="22" parent="." node_paths=PackedStringArray("topCard", "bottomCard", "leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0070497543, 0.011291057, 0.00039589405)
+isCorner = false
+topCard = NodePath("../21")
+bottomCard = NodePath("../23")
+leftCard = NodePath("../12")
+rightCard = NodePath("../32")
 
-[node name="Card9" parent="." instance=ExtResource("1_e3lpq")]
+[node name="12" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15365776, 0.011291057, 0.00039589405)
+isCorner = false
+leftCard = NodePath("../02")
+rightCard = NodePath("../22")
 
-[node name="Card10" parent="." instance=ExtResource("1_e3lpq")]
-transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.31211928, 0.011291057, 0.00039589405)
+[node name="02" parent="." node_paths=PackedStringArray("topCard", "bottomCard", "rightCard") instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25000003, 0, 0, 0, 0.25, 0, 0, 0, 0.25000003, -0.31211928, 0.011291057, 0.00039589405)
+isCorner = false
+topCard = NodePath("../01")
+bottomCard = NodePath("../03")
+rightCard = NodePath("../12")
 
-[node name="Card11" parent="." instance=ExtResource("1_e3lpq")]
+[node name="44" parent="." node_paths=PackedStringArray("topCard", "leftCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, 0.42756665)
+topCard = NodePath("../43")
+leftCard = NodePath("../34")
 
-[node name="Card12" parent="." instance=ExtResource("1_e3lpq")]
+[node name="34" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.16153967, 0.011291057, 0.42756665)
+isCorner = false
+leftCard = NodePath("../24")
+rightCard = NodePath("../44")
 
-[node name="Card13" parent="." instance=ExtResource("1_e3lpq")]
+[node name="24" parent="." node_paths=PackedStringArray("topCard", "leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0070497543, 0.011291057, 0.42756665)
+isCorner = false
+topCard = NodePath("../23")
+leftCard = NodePath("../14")
+rightCard = NodePath("../34")
 
-[node name="Card14" parent="." instance=ExtResource("1_e3lpq")]
+[node name="14" parent="." node_paths=PackedStringArray("leftCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15365776, 0.011291057, 0.42756665)
+isCorner = false
+leftCard = NodePath("../04")
+rightCard = NodePath("../24")
 
-[node name="Card15" parent="." instance=ExtResource("1_e3lpq")]
+[node name="04" parent="." node_paths=PackedStringArray("topCard", "rightCard") instance=ExtResource("1_e3lpq")]
 transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.31211928, 0.011291057, 0.42756665)
+topCard = NodePath("../03")
+rightCard = NodePath("../14")
