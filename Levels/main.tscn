@@ -4,5 +4,14 @@
 
 [node name="Main" type="Node2D"]
 
-[node name="Card" parent="." instance=ExtResource("1_oj8hd")]
-position = Vector2(550, 280)
+[node name="Card" parent="." node_paths=PackedStringArray("otherCard") instance=ExtResource("1_oj8hd")]
+position = Vector2(558, 335)
+isActive = null
+isCorner = null
+otherCard = NodePath("../Card2")
+
+[node name="Card2" parent="." node_paths=PackedStringArray("otherCard") instance=ExtResource("1_oj8hd")]
+position = Vector2(953, 335)
+isActive = null
+isCorner = null
+otherCard = NodePath("../Card")
