@@ -1,0 +1,68 @@
+[gd_scene load_steps=2 format=3 uid="uid://bv3g8r45dvgvn"]
+
+[ext_resource type="PackedScene" uid="uid://crvs8uw1ygngm" path="res://Objects/card3D.tscn" id="1_e3lpq"]
+
+[node name="Fenster" type="Node3D"]
+
+[node name="Card" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, -0.43033576)
+
+[node name="Card16" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, -0.20233889)
+
+[node name="Card17" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, 0.21623743)
+
+[node name="Card18" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.00530681, 0.011291057, -0.21893166)
+
+[node name="Card19" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.00530681, 0.011291057, 0.21615577)
+
+[node name="Card20" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.30957875, 0.011291057, -0.21904592)
+
+[node name="Card21" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.30957875, 0.011291057, 0.21088073)
+
+[node name="Card2" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.16153967, 0.011291057, -0.43033576)
+
+[node name="Card3" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0070497543, 0.011291057, -0.43033576)
+
+[node name="Card4" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15365776, 0.011291057, -0.43033576)
+
+[node name="Card5" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.31211928, 0.011291057, -0.43033576)
+
+[node name="Card6" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, 0.00039589405)
+
+[node name="Card7" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.16153967, 0.011291057, 0.00039589405)
+
+[node name="Card8" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0070497543, 0.011291057, 0.00039589405)
+
+[node name="Card9" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15365776, 0.011291057, 0.00039589405)
+
+[node name="Card10" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.31211928, 0.011291057, 0.00039589405)
+
+[node name="Card11" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.3137336, 0.011291057, 0.42756665)
+
+[node name="Card12" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.16153967, 0.011291057, 0.42756665)
+
+[node name="Card13" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0.0070497543, 0.011291057, 0.42756665)
+
+[node name="Card14" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.15365776, 0.011291057, 0.42756665)
+
+[node name="Card15" parent="." instance=ExtResource("1_e3lpq")]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.31211928, 0.011291057, 0.42756665)

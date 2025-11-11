@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://chgjtprgra67a"]
+[gd_scene load_steps=9 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
+[ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sywdn"]
 transparency = 2
@@ -80,3 +81,6 @@ libraries = {
 [node name="Camera3D" type="Camera3D" parent="camera root"]
 transform = Transform3D(1, 0, 0, 0, 0.9252097, 0.37945616, 0, -0.37945616, 0.9252097, 0, 1.4, 2.65)
 fov = 23.0
+
+[node name="Fenster" parent="camera root" instance=ExtResource("3_sywdn")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 0, 0, 0)
