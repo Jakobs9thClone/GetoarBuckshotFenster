@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chgjtprgra67a"]
+
+[ext_resource type="ArrayMesh" uid="uid://nwtdh30gfkjx" path="res://3dObj/scene ref.obj" id="1_yvjfh"]
+
+[node name="Main3d" type="Node3D"]
+
+[node name="SceneRef" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35358918, 0, 0.26271415)
+mesh = ExtResource("1_yvjfh")
