@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://crvs8uw1ygngm"]
+[gd_scene load_steps=10 format=3 uid="uid://crvs8uw1ygngm"]
 
 [ext_resource type="Script" uid="uid://bixhcs3i2qrrr" path="res://Objects/card_3d.gd" id="1_6vkeq"]
 [ext_resource type="Texture2D" uid="uid://bttt62w8fj26l" path="res://Sprites/karten/Herz10.png" id="1_r3sfb"]
+[ext_resource type="Texture2D" uid="uid://bnkh1sdiqxsw0" path="res://Sprites/karten/fisikali fit.png" id="3_dr2mf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dr2mf"]
 size = Vector3(0.50354004, 0.016601563, 0.79437256)
@@ -29,17 +30,6 @@ tracks/0/keys = PackedFloat32Array(0, 1, -0.70710677, 0, 0, 0.70710677, 0.2, 1, 
 
 [sub_resource type="Animation" id="Animation_gmn50"]
 resource_name = "hover"
-length = 0.04
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite3D")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -4.714162e-10, -0.0053923726, 0, 0.033333335, 1, -4.714162e-10, 0.02470629, 0)
-
-[sub_resource type="Animation" id="Animation_6vkeq"]
-resource_name = "hover_down"
 length = 0.1
 tracks/0/type = "position_3d"
 tracks/0/imported = false
@@ -47,7 +37,32 @@ tracks/0/enabled = true
 tracks/0/path = NodePath("Sprite3D")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, -4.714162e-10, 0.02470629, 0, 0.1, 1, -4.714162e-10, -0.0067652464, 0)
+tracks/0/keys = PackedFloat32Array(0, 1, -4.714162e-10, -0.0011022538, 0, 0.1, 1, 0, 0.1, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.7071067, 0, 0, 0.7071068)
+
+[sub_resource type="Animation" id="Animation_6vkeq"]
+resource_name = "hover_down"
+length = 0.2
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.1, 0, 0.2, 1, -4.714162e-10, -0.012922719, 0)
+tracks/1/type = "rotation_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite3D")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, -0.70710677, 0, 0, 0.70710677)
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nu8qf"]
 _data = {
@@ -61,9 +76,14 @@ _data = {
 script = ExtResource("1_6vkeq")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(-1, -8.742278e-08, 3.821371e-15, 0, -4.371139e-08, -1, 8.742278e-08, -1, 4.371139e-08, -4.714162e-10, -0.0053923726, 0)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.714162e-10, -0.0053923726, 0)
 texture_filter = 0
 texture = ExtResource("1_r3sfb")
+
+[node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
+transform = Transform3D(1.6841555, 0, 0, 0, 2.5076582, 0, 0, 0, 0.99999994, 0, 1.5455592e-10, 0.003535822)
+pixel_size = 0.0002
+texture = ExtResource("3_dr2mf")
 
 [node name="Area3D" type="Area3D" parent="."]
 

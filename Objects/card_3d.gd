@@ -10,6 +10,8 @@ extends Node3D
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
 
+var hasBeenTurned = false;
+
 var mouseIsOn = false;
 
 var otherVar
@@ -33,7 +35,8 @@ func _process(delta: float) -> void:
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
-		if mouseIsOn:
+		if mouseIsOn and not hasBeenTurned:
+			hasBeenTurned = true
 			animation_player.play("flip")
 		print("Mouse Click/Unclick at: ", event.position)
 	elif event is InputEventMouseMotion:
@@ -44,10 +47,12 @@ func _input(event):
 	#print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
 
 func _on_area_3d_mouse_entered() -> void:
-	animation_player.play("hover")
-	mouseIsOn = true; # Replace with function body.
+	if not hasBeenTurned:
+		animation_player.play("hover")
+		mouseIsOn = true; # Replace with function body.
 
 
 func _on_area_3d_mouse_exited() -> void:
-	animation_player.play("hover_down")
-	mouseIsOn = false # Replace with function body.
+	if not hasBeenTurned:
+		animation_player.play("hover_down")
+		mouseIsOn = false # Replace with function body.
