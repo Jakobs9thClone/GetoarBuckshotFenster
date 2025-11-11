@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://crvs8uw1ygngm"]
+
+[ext_resource type="Texture2D" uid="uid://bttt62w8fj26l" path="res://Sprites/karten/Herz10.png" id="1_r3sfb"]
+
+[node name="Card" type="Node3D"]
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.0046697855, 1.4901161e-08, 0.0019007921)
+texture_filter = 0
+texture = ExtResource("1_r3sfb")

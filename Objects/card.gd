@@ -22,7 +22,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if otherCard.mouseIsOn == true:
+	if topCard.mouseIsOn == true:
 		print("otherCard active")
 	#print(otherVar.isActive)
 	#var otherScript = otherCard.get_script()
