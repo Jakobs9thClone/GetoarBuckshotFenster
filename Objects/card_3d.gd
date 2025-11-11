@@ -14,6 +14,7 @@ var mouseIsOn = false;
 
 var otherVar
 
+@onready var animation_player = $AnimationPlayer
 
 func _ready() -> void:
 	pass
@@ -32,6 +33,8 @@ func _process(delta: float) -> void:
 func _input(event):
 	# Mouse in viewport coordinates.
 	if event is InputEventMouseButton:
+		if mouseIsOn:
+			animation_player.play("flip")
 		print("Mouse Click/Unclick at: ", event.position)
 	elif event is InputEventMouseMotion:
 		#print("Mouse Motion at: ", event.position)
@@ -41,8 +44,10 @@ func _input(event):
 	#print("Viewport Resolution is: ", get_viewport().get_visible_rect().size)
 
 func _on_area_3d_mouse_entered() -> void:
+	animation_player.play("hover")
 	mouseIsOn = true; # Replace with function body.
 
 
 func _on_area_3d_mouse_exited() -> void:
+	animation_player.play("hover_down")
 	mouseIsOn = false # Replace with function body.
