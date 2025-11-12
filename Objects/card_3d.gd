@@ -122,7 +122,9 @@ func reset(resetid: int, eventEntry: bool) -> void:
 
 func _input(event):
 	if event is InputEventMouseButton:
-		if mouseIsOn and not hasBeenTurned:
+		if event.is_action_pressed("Mouse Middle"):
+			print("amk")
+		elif mouseIsOn and not hasBeenTurned:
 			hasBeenTurned = true
 			animation_player.play("flip")
 			var numN = getAmountOfTurnedNeighbours()
@@ -153,12 +155,15 @@ func _input(event):
 		pass
 
 func _on_area_3d_mouse_entered() -> void:
-	print(getAmountOfTurnedNeighbours())
 	if not hasBeenTurned and hasTurnedNeighbours:
 		animation_player.play("hover")
 		mouseIsOn = true;
+		
+		master.stateOfCurrentCard = getAmountOfTurnedNeighbours().x
 
 func _on_area_3d_mouse_exited() -> void:
 	if not hasBeenTurned and hasTurnedNeighbours:
 		animation_player.play("hover_down")
 		mouseIsOn = false 
+
+		master.stateOfCurrentCard = 0

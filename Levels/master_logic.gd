@@ -11,7 +11,8 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event):
-	if event.is_action_pressed("Mouse Middle"):
+	if event.is_action_pressed("Mouse Middle") and Fenster.allowedToSwitchPlayer:
+		Fenster.allowedToSwitchPlayer = false
 		if Fenster.currentPlayer == 0:
 			cameraAnimator.play("camera_turn")
 			Fenster.currentPlayer = 1
