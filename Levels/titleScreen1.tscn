@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://yy27pxwl3gmk" path="res://Sprites/title/gbffill.png" id="1_l3muk"]
 [ext_resource type="Theme" uid="uid://8fsg3ew3emc2" path="res://Assets/buttontheme.tres" id="1_m76e8"]
 [ext_resource type="Script" uid="uid://d0eau8eyhy8ib" path="res://Objects/title_screen_1.gd" id="1_rx2sf"]
-[ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background.png" id="3_vwxqg"]
+[ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="3_vwxqg"]
 [ext_resource type="Script" uid="uid://bl4rnd60hbb4x" path="res://Objects/texture_rect.gd" id="4_lb01t"]
 
 [node name="Control" type="Control"]
@@ -19,8 +19,8 @@ script = ExtResource("1_rx2sf")
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_right = 1361.0
-offset_bottom = 1022.0
+offset_right = 1545.0
+offset_bottom = 1214.0
 texture = ExtResource("3_vwxqg")
 stretch_mode = 4
 script = ExtResource("4_lb01t")

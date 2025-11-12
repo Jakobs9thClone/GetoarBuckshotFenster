@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctqdprp1o7hx1"
-path.s3tc="res://.godot/imported/background.png-57129bfa4b9d07c11fecfccf07b2234e.s3tc.ctex"
+uid="uid://cg7gkafytfoce"
+path.s3tc="res://.godot/imported/background2.png-ebb5e57f32b294b1efcce0c38f4782af.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Sprites/scene/background.png"
-dest_files=["res://.godot/imported/background.png-57129bfa4b9d07c11fecfccf07b2234e.s3tc.ctex"]
+source_file="res://Sprites/scene/background2.png"
+dest_files=["res://.godot/imported/background2.png-ebb5e57f32b294b1efcce0c38f4782af.s3tc.ctex"]
 
 [params]
 
