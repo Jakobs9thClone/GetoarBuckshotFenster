@@ -3,8 +3,8 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	$CenterContainer/VBoxContainer/startGame.pressed.connect(startsaftung)
-	$CenterContainer/VBoxContainer/endGame.pressed.connect(endsaftung)
+	$VBoxContainer/startGame.pressed.connect(startsaftung)
+	$VBoxContainer/endGame.pressed.connect(endsaftung)
 
 func startsaftung():
 	var canvas_layer = CanvasLayer.new()
@@ -20,7 +20,7 @@ func startsaftung():
 	
 	await get_tree().create_timer(0.2).timeout
 	
-	get_tree().change_scene_to_packed(load("res://Levels/main3d.tscn"))
+	get_tree().change_scene_to_packed(load("res://Levels/titleScreen1.tscn"))
 	
 	var tween = canvas_layer.create_tween()
 	tween.tween_property(overlay, "modulate:a", 0.0, 2)
