@@ -137,7 +137,7 @@ func _input(event):
 			var numN = getAmountOfTurnedNeighbours()
 			if event.is_action_pressed("Mouse Left"):
 				if numN.x == 1:
-					if cardValue >= numN.z:
+					if cardValue <= numN.z:
 						reset(randi(),true)
 						print("verloren du Pisser")
 				if numN.x >= 2:
@@ -147,7 +147,7 @@ func _input(event):
 						
 			if event.is_action_pressed("Mouse Right"):
 				if numN.x == 1:
-					if cardValue <= numN.z:
+					if cardValue >= numN.z:
 						reset(randi(),true)
 						print("verloren weil kleiner")
 				if numN.x >= 2:
