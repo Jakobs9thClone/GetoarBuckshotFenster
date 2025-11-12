@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=17 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background.png" id="1_sywdn"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
 [ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
 [ext_resource type="Theme" uid="uid://8fsg3ew3emc2" path="res://Assets/buttontheme.tres" id="6_amcn2"]
+[ext_resource type="AudioStream" uid="uid://du4s63lescdii" path="res://Sounds/Selbstgemacht/base1.wav" id="7_g1e2x"]
+[ext_resource type="AudioStream" uid="uid://brcbp8lyxmskn" path="res://Sounds/Music/depresso_espresso.mp3" id="8_vid43"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
 length = 0.001
@@ -127,5 +129,15 @@ layout_mode = 2
 theme = ExtResource("6_amcn2")
 text = "Weitergeben"
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_g1e2x")
+volume_db = -13.565
+autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_vid43")
+volume_db = -9.948
+autoplay = true
 
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
