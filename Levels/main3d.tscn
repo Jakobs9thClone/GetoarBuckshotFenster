@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=19 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
 [ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
 [ext_resource type="Script" uid="uid://cal7r658xtafc" path="res://Objects/background2.gd" id="4_vid43"]
-[ext_resource type="Theme" uid="uid://8fsg3ew3emc2" path="res://Assets/buttontheme.tres" id="6_amcn2"]
 [ext_resource type="Texture2D" uid="uid://bmfnkovxagd0w" path="res://Sprites/karten/schatten.png" id="10_xba5i"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
@@ -137,18 +136,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_sywdn")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_m1evb")
 
-[node name="GridContainer" type="GridContainer" parent="."]
-offset_left = 981.0
-offset_top = 587.0
-offset_right = 1143.0
-offset_bottom = 633.0
-
-[node name="Button" type="Button" parent="GridContainer"]
-layout_mode = 2
-theme = ExtResource("6_amcn2")
-text = "Weitergeben"
-flat = true
-
 [node name="schatten" type="Node" parent="."]
 
 [node name="Sprite3D" type="Sprite3D" parent="schatten"]
@@ -255,5 +242,3 @@ texture = ExtResource("10_xba5i")
 transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.16857755, 0.005, -0.008584529)
 texture_filter = 0
 texture = ExtResource("10_xba5i")
-
-[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
