@@ -10,6 +10,9 @@ extends Node3D
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
 
+var cardDimensions = Vector2i(51,79)
+var distbetweenCards = 6
+
 var hasBeenTurned = false
 var hasTurnedNeighbours = false
 
@@ -91,7 +94,10 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		lastResetID = resetid
 		hasBeenTurned = false
 		animation_player.play("flip_back")
+		cardValue = randi_range(0,12)
+		debug_Label.text = str(cardValue)
 		await get_tree().create_timer(0.1).timeout
+		mouseIsOn = false
 		if topCard != null:
 			topCard.reset(resetid,false)
 		if bottomCard != null:
@@ -105,12 +111,7 @@ func reset(resetid: int, eventEntry: bool) -> void:
 			await get_tree().create_timer(0.5).timeout
 			hasBeenTurned = true
 			animation_player.play("flip")
-		
-	else:
-		print("reset rejected")
-		
-		
-	
+
 func _input(event):
 	if event is InputEventMouseButton:
 
