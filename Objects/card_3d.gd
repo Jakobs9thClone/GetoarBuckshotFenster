@@ -26,14 +26,11 @@ var lastResetID = null
 func _ready() -> void:
 	cardValue = randi_range(0,12)
 	cardSymbol = randi_range(0,3)
-	debug_Label.text = str(cardValue+2)
+	debug_Label.text = str(cardValue)
 	cardSprite.frame_coords = Vector2i(cardValue,cardSymbol)
 	if isCorner:
 		hasBeenTurned = true
 		animation_player.play("flip")
-
-#func wait(seconds: float) -> void:
-#(get_tree().create_timer(seconds), "timeout")
 
 func _process(delta: float) -> void:
 	hasTurnedNeighbours = false
@@ -85,6 +82,14 @@ func getAmountOfTurnedNeighbours() -> Vector3i:
 				max = rightCard.cardValue
 			if rightCard.cardValue < min:
 				max = rightCard.cardValue
+	
+	
+	if temp.x == 1:
+		if min != 999:
+			print("triggered")
+			max = min
+		else:
+			min = max
 	temp.y = min
 	temp.z = max
 	return temp
@@ -98,7 +103,7 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		hasBeenTurned = false
 		animation_player.play("flip_back")
 		cardValue = randi_range(0,12)
-		debug_Label.text = str(cardValue+2)
+		debug_Label.text = str(cardValue)
 		await get_tree().create_timer(0.05).timeout
 		mouseIsOn = false
 		if topCard != null:
@@ -137,14 +142,19 @@ func _input(event):
 					if cardValue <= numN.z:
 						reset(randi(),true)
 						print("verloren weil kleiner")
-					if numN.x >= 2:
-						if cardValue >= numN.z and cardValue <= numN.y:
-							reset(randi(),true)
-							print("außerhalb du Pisser")
+				if numN.x >= 2:
+					print(cardValue >= numN.z, cardValue <= numN.y)
+					if cardValue <= numN.z and cardValue <= numN.y:
+						reset(randi(),true)
+						print("außerhalb du Pisser")
+			
+			else:
+				master.allowedToSwitchPlayer = true
 	elif event is InputEventMouseMotion:
 		pass
 
 func _on_area_3d_mouse_entered() -> void:
+	print(getAmountOfTurnedNeighbours())
 	if not hasBeenTurned and hasTurnedNeighbours:
 		animation_player.play("hover")
 		mouseIsOn = true;
