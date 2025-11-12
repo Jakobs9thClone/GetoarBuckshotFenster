@@ -1,36 +1,38 @@
 extends Node3D
 
 @export var debug_Label: Node
-@export var isActive = false
 @export var isCorner = true
 @export var topCard: Node
 @export var bottomCard: Node
-@export var leftCard: Node
+@export var leftCard: Node 
 @export var rightCard: Node
 
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
+
+var cardDimensions = Vector2i(51,79)
+var distbetweenCards = 6
 
 var hasBeenTurned = false
 var hasTurnedNeighbours = false
 
 var mouseIsOn = false
 
-var otherVar
-
 @onready var animation_player = $AnimationPlayer
+@onready var master = get_parent()
+var lastResetID = null
 
 func _ready() -> void:
 	cardValue = randi_range(0,12)
 	debug_Label.text = str(cardValue)
 	if isCorner:
-		hasBeenTurned =  true
+		hasBeenTurned = true
 		animation_player.play("flip")
 
+#func wait(seconds: float) -> void:
+#(get_tree().create_timer(seconds), "timeout")
+
 func _process(delta: float) -> void:
-	if mouseIsOn == true:
-		pass
-	
 	hasTurnedNeighbours = false
 	if topCard != null:
 		if topCard.hasBeenTurned == true:
@@ -84,8 +86,31 @@ func getAmountOfTurnedNeighbours() -> Vector3i:
 	temp.z = max
 	return temp
 
-func reset() -> void:
-	pass
+func reset(resetid: int, eventEntry: bool) -> void:
+	if eventEntry:
+		await get_tree().create_timer(0.75).timeout
+	
+	if resetid != lastResetID and hasBeenTurned:
+		lastResetID = resetid
+		hasBeenTurned = false
+		animation_player.play("flip_back")
+		cardValue = randi_range(0,12)
+		debug_Label.text = str(cardValue)
+		await get_tree().create_timer(0.1).timeout
+		mouseIsOn = false
+		if topCard != null:
+			topCard.reset(resetid,false)
+		if bottomCard != null:
+			bottomCard.reset(resetid,false)
+		if rightCard != null:
+			rightCard.reset(resetid,false)
+		if leftCard != null:
+			leftCard.reset(resetid,false)
+		
+		if isCorner:
+			await get_tree().create_timer(0.5).timeout
+			hasBeenTurned = true
+			animation_player.play("flip")
 
 func _input(event):
 	if event is InputEventMouseButton:
@@ -95,22 +120,23 @@ func _input(event):
 			animation_player.play("flip")
 			var numN = getAmountOfTurnedNeighbours()
 			if event.is_action_pressed("Mouse Left"):
-				print(numN)
 				if numN.x == 1:
 					if cardValue >= numN.z:
-						reset()
+						reset(randi(),true)
 						print("verloren du Pisser")
 				if numN.x >= 2:
 					if cardValue <= numN.z and cardValue >= numN.y:
+						reset(randi(),true)
 						print("innerhalb du kleiner Peach")
 						
 			if event.is_action_pressed("Mouse Right"):
 				if numN.x == 1:
 					if cardValue <= numN.z:
-						reset()
+						reset(randi(),true)
 						print("verloren weil kleiner")
 					if numN.x >= 2:
 						if cardValue >= numN.z and cardValue <= numN.y:
+							reset(randi(),true)
 							print("außerhalb du Pisser")
 	elif event is InputEventMouseMotion:
 		pass
