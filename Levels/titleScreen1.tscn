@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b87qk3ds3tk0r"]
+[gd_scene load_steps=7 format=3 uid="uid://b87qk3ds3tk0r"]
 
 [ext_resource type="Texture2D" uid="uid://yy27pxwl3gmk" path="res://Sprites/title/gbffill.png" id="1_l3muk"]
 [ext_resource type="Theme" uid="uid://8fsg3ew3emc2" path="res://Assets/buttontheme.tres" id="1_m76e8"]
 [ext_resource type="Script" uid="uid://d0eau8eyhy8ib" path="res://Objects/title_screen_1.gd" id="1_rx2sf"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="3_vwxqg"]
 [ext_resource type="Script" uid="uid://bl4rnd60hbb4x" path="res://Objects/texture_rect.gd" id="4_lb01t"]
+[ext_resource type="AudioStream" uid="uid://bvud5qw71ci3q" path="res://Sounds/Music/Fenster Ambient Music 12.11.25.mp3" id="6_lb01t"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -59,3 +60,8 @@ text = "MANN"
 [node name="endGame" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
 text = "MAUS"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_lb01t")
+volume_db = -19.896
+autoplay = true
