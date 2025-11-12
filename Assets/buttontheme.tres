@@ -3,16 +3,16 @@
 [ext_resource type="FontFile" uid="uid://c3gdj0k0fe2pc" path="res://Assets/ViaodaLibre-Regular.ttf" id="1_2bado"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2bado"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gt0m4"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ty5"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_edqsg"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+bg_color = Color(0, 0, 0, 1)
 
 [resource]
 default_font = ExtResource("1_2bado")
