@@ -1,10 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=19 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
-[ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background.png" id="1_sywdn"]
+[ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
+[ext_resource type="Texture2D" uid="uid://cg7gkafytfoce" path="res://Sprites/scene/background2.png" id="2_vid43"]
+[ext_resource type="Script" uid="uid://bm1jxr8bj6m1y" path="res://Objects/background1.gd" id="3_g1e2x"]
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
 [ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
+[ext_resource type="Script" uid="uid://cal7r658xtafc" path="res://Objects/background2.gd" id="4_vid43"]
 [ext_resource type="Theme" uid="uid://8fsg3ew3emc2" path="res://Assets/buttontheme.tres" id="6_amcn2"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
@@ -70,7 +73,16 @@ texture_filter = 0
 billboard_mode = 1
 fixed_size = true
 use_fov_override = true
-fov_override = 30.0
+fov_override = 45.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ytrxn"]
+shading_mode = 0
+albedo_texture = ExtResource("2_vid43")
+texture_filter = 0
+billboard_mode = 1
+fixed_size = true
+use_fov_override = true
+fov_override = 45.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sywdn"]
 transparency = 2
@@ -98,14 +110,22 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="camera root"]
-transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, 0, 0.8, 1.6)
+transform = Transform3D(1, 0, 0, 0, 0.8829476, 0.4694716, 0, -0.4694716, 0.8829476, 0, 1.18, 1.7)
 fov = 35.0
 
-[node name="background" type="MeshInstance3D" parent="camera root"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.3654655, -1.8)
+[node name="background1" type="MeshInstance3D" parent="camera root"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.2, -1.8)
 mesh = SubResource("QuadMesh_inedi")
 skeleton = NodePath("../../WorldEnvironment")
 surface_material_override/0 = SubResource("StandardMaterial3D_amcn2")
+script = ExtResource("3_g1e2x")
+
+[node name="background2" type="MeshInstance3D" parent="camera root"]
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.2, 1.8)
+mesh = SubResource("QuadMesh_inedi")
+skeleton = NodePath("../../WorldEnvironment")
+surface_material_override/0 = SubResource("StandardMaterial3D_ytrxn")
+script = ExtResource("4_vid43")
 
 [node name="Scene" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_m1evb")
