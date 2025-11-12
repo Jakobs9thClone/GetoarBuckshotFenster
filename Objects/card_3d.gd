@@ -122,7 +122,6 @@ func reset(resetid: int, eventEntry: bool) -> void:
 
 func _input(event):
 	if event is InputEventMouseButton:
-
 		if mouseIsOn and not hasBeenTurned:
 			hasBeenTurned = true
 			animation_player.play("flip")
