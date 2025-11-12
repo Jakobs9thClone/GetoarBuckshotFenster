@@ -1,6 +1,7 @@
 extends Node3D
 
 @export var debug_Label: Node
+@export var cardSprite: Node
 @export var isCorner = true
 @export var topCard: Node
 @export var bottomCard: Node
@@ -24,7 +25,9 @@ var lastResetID = null
 
 func _ready() -> void:
 	cardValue = randi_range(0,12)
-	debug_Label.text = str(cardValue)
+	cardSymbol = randi_range(0,3)
+	debug_Label.text = str(cardValue+2)
+	cardSprite.frame_coords = Vector2i(cardValue,cardSymbol)
 	if isCorner:
 		hasBeenTurned = true
 		animation_player.play("flip")
@@ -95,8 +98,8 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		hasBeenTurned = false
 		animation_player.play("flip_back")
 		cardValue = randi_range(0,12)
-		debug_Label.text = str(cardValue)
-		await get_tree().create_timer(0.1).timeout
+		debug_Label.text = str(cardValue+2)
+		await get_tree().create_timer(0.05).timeout
 		mouseIsOn = false
 		if topCard != null:
 			topCard.reset(resetid,false)
@@ -108,7 +111,7 @@ func reset(resetid: int, eventEntry: bool) -> void:
 			leftCard.reset(resetid,false)
 		
 		if isCorner:
-			await get_tree().create_timer(0.5).timeout
+			await get_tree().create_timer(0.3).timeout
 			hasBeenTurned = true
 			animation_player.play("flip")
 
