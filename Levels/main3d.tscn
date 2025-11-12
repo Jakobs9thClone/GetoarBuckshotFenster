@@ -4,12 +4,12 @@
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
 [ext_resource type="Texture2D" uid="uid://cg7gkafytfoce" path="res://Sprites/scene/background2.png" id="2_vid43"]
-[ext_resource type="Script" path="res://Objects/background1.gd" id="3_g1e2x"]
+[ext_resource type="Script" uid="uid://bm1jxr8bj6m1y" path="res://Objects/background1.gd" id="3_g1e2x"]
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
 [ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
-[ext_resource type="Script" path="res://Objects/background2.gd" id="4_vid43"]
+[ext_resource type="Script" uid="uid://cal7r658xtafc" path="res://Objects/background2.gd" id="4_vid43"]
 [ext_resource type="Theme" uid="uid://8fsg3ew3emc2" path="res://Assets/buttontheme.tres" id="6_amcn2"]
-[ext_resource type="AudioStream" uid="uid://d35evn2tyrnvt" path="res://Sounds/Music/depresso_espresso.wav" id="10_xba5i"]
+[ext_resource type="Texture2D" uid="uid://bmfnkovxagd0w" path="res://Sprites/karten/schatten.png" id="10_xba5i"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
 length = 0.001
@@ -149,9 +149,111 @@ theme = ExtResource("6_amcn2")
 text = "Weitergeben"
 flat = true
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("10_xba5i")
-volume_db = -8.985
-autoplay = true
+[node name="schatten" type="Node" parent="."]
+
+[node name="Sprite3D" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.00858748, 0.009689957, 0)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D2" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.15153244, 0.009689957, 0.019658523)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D21" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.30911988, 0.009689957, 0.2120079)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D3" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.3227245, 0.009689957, -0.002555117)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D4" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.30766103, 0.009689957, -0.21460292)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D5" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.31693092, 0.009689957, -0.43476188)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D6" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.15123239, 0.009689957, -0.43360314)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D7" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.0098312795, 0.009689957, -0.4324444)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D8" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.16394255, 0.009689957, -0.44866663)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D9" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.3180538, 0.009689957, -0.42780948)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D10" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.017942399, 0.009689957, -0.21923785)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D11" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.30414906, 0.009689957, -0.2203966)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D12" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.32732365, 0.009689957, 0.0032385439)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D13" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.0075137317, 0.009689957, 0.2129689)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D14" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.31808972, 0.009689957, 0.4226992)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D15" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, -0.15123242, 0.009689957, 0.4041595)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D16" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.004037559, 0.009689957, 0.42733413)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D17" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.16046631, 0.009689957, 0.43196908)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D18" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.31226015, 0.009689957, 0.4296516)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D19" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.3053078, 0.009689957, 0.21528631)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
+
+[node name="Sprite3D20" type="Sprite3D" parent="schatten"]
+transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.16857755, 0.009689957, -0.008584529)
+texture_filter = 0
+texture = ExtResource("10_xba5i")
 
 [connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
