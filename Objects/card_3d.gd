@@ -8,6 +8,8 @@ extends Node3D
 @export var leftCard: Node 
 @export var rightCard: Node
 
+var abzugProKarte = 10
+
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
 
@@ -104,6 +106,11 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		animation_player.play("flip_back")
 		cardValue = randi_range(0,12)
 		debug_Label.text = str(cardValue)
+		if master.currentPlayer == 1:
+			master.Getti_Money -= abzugProKarte
+		else:
+			master.Bleron_Money -= abzugProKarte
+			
 		await get_tree().create_timer(0.05).timeout
 		mouseIsOn = false
 		if topCard != null:

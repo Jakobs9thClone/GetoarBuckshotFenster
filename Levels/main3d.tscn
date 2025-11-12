@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=21 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
 [ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
 [ext_resource type="Script" uid="uid://cal7r658xtafc" path="res://Objects/background2.gd" id="4_vid43"]
+[ext_resource type="PackedScene" uid="uid://b64saanc6rka1" path="res://Objects/tooltips.tscn" id="10_6ire3"]
 [ext_resource type="Texture2D" uid="uid://bmfnkovxagd0w" path="res://Sprites/karten/schatten.png" id="10_xba5i"]
+[ext_resource type="FontFile" uid="uid://c3gdj0k0fe2pc" path="res://Assets/ViaodaLibre-Regular.ttf" id="11_6ire3"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
 length = 0.001
@@ -131,7 +133,9 @@ script = ExtResource("4_vid43")
 mesh = ExtResource("2_m1evb")
 surface_material_override/0 = SubResource("StandardMaterial3D_sywdn")
 
-[node name="Fenster" parent="." instance=ExtResource("3_sywdn")]
+[node name="Fenster" parent="." node_paths=PackedStringArray("gettiGeldLabel", "bleronGeldLabel") instance=ExtResource("3_sywdn")]
+gettiGeldLabel = NodePath("../Geld_Label_Getti")
+bleronGeldLabel = NodePath("../Geld_Label_Bleron")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_m1evb")
@@ -242,3 +246,21 @@ texture = ExtResource("10_xba5i")
 transform = Transform3D(0.31, 0, 0, 0, -1.35505305e-08, -0.31, 0, 0.31, -1.35505305e-08, 0.16857755, 0.005, -0.008584529)
 texture_filter = 0
 texture = ExtResource("10_xba5i")
+
+[node name="Control" parent="." instance=ExtResource("10_6ire3")]
+
+[node name="Geld_Label_Getti" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67687637, 0.09037581, -0.44051173)
+billboard = 1
+texture_filter = 0
+text = "1234$"
+font = ExtResource("11_6ire3")
+outline_size = 4
+
+[node name="Geld_Label_Bleron" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.62412804, 0.09037581, 0.4361817)
+billboard = 1
+texture_filter = 0
+text = "1234$"
+font = ExtResource("11_6ire3")
+outline_size = 4
