@@ -32,9 +32,6 @@ func _ready() -> void:
 		hasBeenTurned = true
 		animation_player.play("flip")
 
-#func wait(seconds: float) -> void:
-#(get_tree().create_timer(seconds), "timeout")
-
 func _process(delta: float) -> void:
 	hasTurnedNeighbours = false
 	if topCard != null:
@@ -89,6 +86,7 @@ func getAmountOfTurnedNeighbours() -> Vector3i:
 	
 	if temp.x == 1:
 		if min != 999:
+			print("triggered")
 			max = min
 		else:
 			min = max
@@ -144,10 +142,14 @@ func _input(event):
 					if cardValue <= numN.z:
 						reset(randi(),true)
 						print("verloren weil kleiner")
-					if numN.x >= 2:
-						if cardValue >= numN.z and cardValue <= numN.y:
-							reset(randi(),true)
-							print("außerhalb du Pisser")
+				if numN.x >= 2:
+					print(cardValue >= numN.z, cardValue <= numN.y)
+					if cardValue <= numN.z and cardValue <= numN.y:
+						reset(randi(),true)
+						print("außerhalb du Pisser")
+			
+			else:
+				master.allowedToSwitchPlayer = true
 	elif event is InputEventMouseMotion:
 		pass
 
