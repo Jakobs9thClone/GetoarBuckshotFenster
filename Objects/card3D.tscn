@@ -83,7 +83,7 @@ texture_filter = 0
 texture = ExtResource("1_r3sfb")
 
 [node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
-transform = Transform3D(0.39291173, 0, 0, 0, 0.3962937, -3.5527137e-15, 0, 0, 1, 0.003705054, -0.0116256615, 0.01844871)
+transform = Transform3D(0.39291173, 0, 0, 0, 0.3962937, -3.5527137e-15, 0, 0, 1, 0.003705054, -0.0116256615, 0.018658161)
 texture_filter = 0
 texture = ExtResource("3_dr2mf")
 
