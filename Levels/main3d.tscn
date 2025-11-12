@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=22 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b64saanc6rka1" path="res://Objects/tooltips.tscn" id="10_6ire3"]
 [ext_resource type="Texture2D" uid="uid://bmfnkovxagd0w" path="res://Sprites/karten/schatten.png" id="10_xba5i"]
 [ext_resource type="FontFile" uid="uid://c3gdj0k0fe2pc" path="res://Assets/ViaodaLibre-Regular.ttf" id="11_6ire3"]
+[ext_resource type="PackedScene" uid="uid://mue1q18eqr3k" path="res://Objects/einsatzMenue.tscn" id="12_f2yab"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
 length = 0.001
@@ -264,3 +265,5 @@ texture_filter = 0
 text = "1234$"
 font = ExtResource("11_6ire3")
 outline_size = 4
+
+[node name="Control2" parent="." instance=ExtResource("12_f2yab")]
