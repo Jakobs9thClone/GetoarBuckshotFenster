@@ -26,7 +26,7 @@ var lastResetID = null
 func _ready() -> void:
 	cardValue = randi_range(0,12)
 	cardSymbol = randi_range(0,3)
-	debug_Label.text = str(cardValue+2)
+	debug_Label.text = str(cardValue)
 	cardSprite.frame_coords = Vector2i(cardValue,cardSymbol)
 	if isCorner:
 		hasBeenTurned = true
@@ -85,6 +85,13 @@ func getAmountOfTurnedNeighbours() -> Vector3i:
 				max = rightCard.cardValue
 			if rightCard.cardValue < min:
 				max = rightCard.cardValue
+	
+	
+	if temp.x == 1:
+		if min != 999:
+			max = min
+		else:
+			min = max
 	temp.y = min
 	temp.z = max
 	return temp
@@ -98,7 +105,7 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		hasBeenTurned = false
 		animation_player.play("flip_back")
 		cardValue = randi_range(0,12)
-		debug_Label.text = str(cardValue+2)
+		debug_Label.text = str(cardValue)
 		await get_tree().create_timer(0.05).timeout
 		mouseIsOn = false
 		if topCard != null:
@@ -145,6 +152,7 @@ func _input(event):
 		pass
 
 func _on_area_3d_mouse_entered() -> void:
+	print(getAmountOfTurnedNeighbours())
 	if not hasBeenTurned and hasTurnedNeighbours:
 		animation_player.play("hover")
 		mouseIsOn = true;
