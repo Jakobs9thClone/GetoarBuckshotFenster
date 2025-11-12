@@ -110,7 +110,7 @@ libraries = {
 }
 
 [node name="Camera3D" type="Camera3D" parent="camera root"]
-transform = Transform3D(1, 0, 0, 0, 0.8829476, 0.4694716, 0, -0.4694716, 0.8829476, 0, 1.18, 1.7)
+transform = Transform3D(1, 0, 0, 0, 0.87276024, 0.4881491, 0, -0.4881491, 0.87276024, 0, 1.2346054, 1.7273028)
 fov = 35.0
 
 [node name="background1" type="MeshInstance3D" parent="camera root"]
