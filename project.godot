@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://vcesn58ykdlc"
 config/windows_native_icon="res://Assets/icon.ico"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 "Mouse Left"={

@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background.png" id="1_sywdn"]
-[ext_resource type="Script" uid="uid://bm1jxr8bj6m1y" path="res://Levels/background.gd" id="2_inedi"]
+[ext_resource type="Script" uid="uid://bm1jxr8bj6m1y" path="res://Objects/background.gd" id="2_inedi"]
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
 [ext_resource type="Texture2D" uid="uid://c7ljt573r88ff" path="res://Sprites/scene/scene.png" id="3_m1evb"]
 [ext_resource type="PackedScene" uid="uid://bv3g8r45dvgvn" path="res://Objects/Fenster.tscn" id="3_sywdn"]
@@ -69,7 +69,7 @@ texture_filter = 0
 billboard_mode = 1
 fixed_size = true
 use_fov_override = true
-fov_override = 40.0
+fov_override = 30.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sywdn"]
 transparency = 2
@@ -98,7 +98,7 @@ transform = Transform3D(1, 0, 0, 0, 0.7856735, 0.6186416, 0, -0.6186416, 0.78567
 fov = 35.0
 
 [node name="background" type="MeshInstance3D" parent="camera root"]
-transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, 0.42, -1.8)
+transform = Transform3D(10, 0, 0, 0, 10, 0, 0, 0, 10, 0, -0.3654655, -1.8)
 mesh = SubResource("QuadMesh_inedi")
 skeleton = NodePath("../../WorldEnvironment")
 surface_material_override/0 = SubResource("StandardMaterial3D_amcn2")
