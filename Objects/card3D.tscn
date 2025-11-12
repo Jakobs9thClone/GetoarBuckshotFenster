@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://crvs8uw1ygngm"]
+[gd_scene load_steps=11 format=3 uid="uid://crvs8uw1ygngm"]
 
 [ext_resource type="Script" uid="uid://bixhcs3i2qrrr" path="res://Objects/card_3d.gd" id="1_6vkeq"]
 [ext_resource type="Texture2D" uid="uid://bttt62w8fj26l" path="res://Sprites/karten/Herz10.png" id="1_r3sfb"]
@@ -44,7 +44,7 @@ tracks/1/enabled = true
 tracks/1/path = NodePath("Sprite3D")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, -0.7071067, 0, 0, 0.7071068)
+tracks/1/keys = PackedFloat32Array(0, 1, -0.70710677, -2.2476462e-08, -8.4293696e-08, 0.70710677)
 
 [sub_resource type="Animation" id="Animation_6vkeq"]
 resource_name = "hover_down"
@@ -64,10 +64,22 @@ tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, -0.70710677, 0, 0, 0.70710677)
 
+[sub_resource type="Animation" id="Animation_dr2mf"]
+resource_name = "flip_back"
+length = 0.2
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite3D")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 3.090862e-08, 0.70710677, -0.70710677, -3.090862e-08, 0.0001, 1, 3.090862e-08, 0.70710677, -0.70710677, -3.090862e-08, 0.0002, 1, 3.090862e-08, -0.70710677, 0.70710677, 3.090862e-08, 0.00029999999, 1, 3.090862e-08, -0.70710677, 0.70710677, 3.090862e-08, 0.2, 1, -0.70710677, -8.4293696e-08, -2.2476458e-08, 0.70710677)
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nu8qf"]
 _data = {
 &"RESET": SubResource("Animation_jp5bc"),
 &"flip": SubResource("Animation_dh8iw"),
+&"flip_back": SubResource("Animation_dr2mf"),
 &"hover": SubResource("Animation_gmn50"),
 &"hover_down": SubResource("Animation_6vkeq")
 }
@@ -77,15 +89,10 @@ script = ExtResource("1_6vkeq")
 debug_Label = NodePath("Sprite3D/DebugNumber")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.714162e-10, -0.0053923726, 0)
+transform = Transform3D(1, 1.509958e-07, 6.600236e-15, 0, -4.371139e-08, 1, 1.509958e-07, -1, -4.371139e-08, -4.714162e-10, -0.0053923726, 0)
 shaded = true
 texture_filter = 0
 texture = ExtResource("1_r3sfb")
-
-[node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
-transform = Transform3D(0.39291173, 0, 0, 0, 0.3962937, -3.5527137e-15, 0, 0, 1, 0.003705054, -0.0116256615, 0.018658161)
-texture_filter = 0
-texture = ExtResource("3_dr2mf")
 
 [node name="DebugNumber" type="Label3D" parent="Sprite3D"]
 transform = Transform3D(-1, -3.821371e-15, 8.742278e-08, 3.821371e-15, 1, 8.742278e-08, -8.742278e-08, 8.742278e-08, -1, 0, 1.1140763e-09, -0.025487095)
@@ -95,6 +102,11 @@ outline_modulate = Color(1, 1, 1, 1)
 text = "12"
 font_size = 60
 outline_size = 17
+
+[node name="Sprite3D" type="Sprite3D" parent="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.009940654, -0.024780767, 0.030495336)
+texture_filter = 0
+texture = ExtResource("3_dr2mf")
 
 [node name="Area3D" type="Area3D" parent="."]
 
