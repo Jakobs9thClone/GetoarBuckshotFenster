@@ -1,7 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=23 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
+[ext_resource type="Script" uid="uid://b3bio076qmy3t" path="res://Levels/area_3d.gd" id="2_f2yab"]
 [ext_resource type="ArrayMesh" uid="uid://cdt28dr5wafmh" path="res://3dObj/scene.obj" id="2_m1evb"]
 [ext_resource type="Texture2D" uid="uid://cg7gkafytfoce" path="res://Sprites/scene/background2.png" id="2_vid43"]
 [ext_resource type="Script" uid="uid://bm1jxr8bj6m1y" path="res://Objects/background1.gd" id="3_g1e2x"]
@@ -11,6 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://b64saanc6rka1" path="res://Objects/tooltips.tscn" id="10_6ire3"]
 [ext_resource type="Texture2D" uid="uid://bmfnkovxagd0w" path="res://Sprites/karten/schatten.png" id="10_xba5i"]
 [ext_resource type="FontFile" uid="uid://c3gdj0k0fe2pc" path="res://Assets/ViaodaLibre-Regular.ttf" id="11_6ire3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tebnk"]
 
 [sub_resource type="Animation" id="Animation_sywdn"]
 length = 0.001
@@ -103,6 +106,13 @@ ambient_light_color = Color(1, 1, 1, 1)
 script = ExtResource("1_inedi")
 cameraAnimator = NodePath("camera root/AnimationPlayer")
 Fenster = NodePath("Fenster")
+
+[node name="input block wenn animation läuft" type="Area3D" parent="."]
+script = ExtResource("2_f2yab")
+
+[node name="input block wenn animation läuft" type="CollisionShape3D" parent="input block wenn animation läuft"]
+transform = Transform3D(1.5, 0, 0, 0, 0.2, 0, 0, 0, 1.5, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_tebnk")
 
 [node name="camera root" type="Node3D" parent="."]
 
