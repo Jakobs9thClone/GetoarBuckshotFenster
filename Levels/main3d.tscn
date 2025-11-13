@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://bc7efecqy21bq"]
+[gd_scene load_steps=25 format=3 uid="uid://bc7efecqy21bq"]
 
 [ext_resource type="Script" uid="uid://cbgvgy15nhw5x" path="res://Levels/master_logic.gd" id="1_inedi"]
 [ext_resource type="Texture2D" uid="uid://ctqdprp1o7hx1" path="res://Sprites/scene/background1.png" id="1_sywdn"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bmfnkovxagd0w" path="res://Sprites/karten/schatten.png" id="10_xba5i"]
 [ext_resource type="FontFile" uid="uid://c3gdj0k0fe2pc" path="res://Assets/ViaodaLibre-Regular.ttf" id="11_6ire3"]
 [ext_resource type="PackedScene" uid="uid://mue1q18eqr3k" path="res://Objects/einsatzMenue.tscn" id="12_f2yab"]
+[ext_resource type="AudioStream" uid="uid://d35evn2tyrnvt" path="res://Sounds/Music/depresso_espresso.wav" id="14_ehoo4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tebnk"]
 
@@ -277,3 +278,8 @@ font = ExtResource("11_6ire3")
 outline_size = 4
 
 [node name="Control2" parent="." instance=ExtResource("12_f2yab")]
+visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_ehoo4")
+autoplay = true
