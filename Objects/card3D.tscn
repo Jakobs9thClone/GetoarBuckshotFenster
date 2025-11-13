@@ -1,8 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://crvs8uw1ygngm"]
+[gd_scene load_steps=12 format=3 uid="uid://crvs8uw1ygngm"]
 
 [ext_resource type="Script" uid="uid://bixhcs3i2qrrr" path="res://Objects/card_3d.gd" id="1_6vkeq"]
 [ext_resource type="Texture2D" uid="uid://bvk6wyjnj0wu6" path="res://Sprites/karten/kartendeck transp.png" id="2_dr2mf"]
 [ext_resource type="Texture2D" uid="uid://diaq7odhcpw8c" path="res://Sprites/karten/RückseiteKarten.png" id="3_dr2mf"]
+[ext_resource type="AudioStream" uid="uid://dfemy21f4k6x1" path="res://Sounds/Selbstgemacht/shuffle2.wav" id="4_naqve"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dr2mf"]
 size = Vector3(0.50354004, 0.016601563, 0.79437256)
@@ -90,7 +91,7 @@ debug_Label = NodePath("Vorderseite/DebugNumber")
 cardSprite = NodePath("Vorderseite")
 
 [node name="Vorderseite" type="Sprite3D" parent="."]
-transform = Transform3D(-1, -1.5099627e-07, -6.6002565e-15, 0, 4.371139e-08, -1, -1.5099627e-07, 1, 4.371139e-08, -4.714162e-10, -0.0053923726, 0)
+transform = Transform3D(-1, -1.5099631e-07, -6.6002586e-15, 0, 4.371139e-08, -1, -1.5099631e-07, 1, 4.371139e-08, -4.714162e-10, -0.0053923726, 0)
 shaded = true
 alpha_cut = 2
 texture_filter = 0
@@ -125,6 +126,13 @@ shape = SubResource("BoxShape3D_dr2mf")
 libraries = {
 &"": SubResource("AnimationLibrary_nu8qf")
 }
+
+[node name="Shuffle" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_naqve")
+
+[node name="ShuffleDelayTimer" type="Timer" parent="Shuffle"]
+wait_time = 0.5
+one_shot = true
 
 [connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
 [connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

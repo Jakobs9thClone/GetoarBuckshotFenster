@@ -25,6 +25,9 @@ var mouseIsOn = false
 @onready var master = get_parent()
 var lastResetID = null
 
+@onready var shuffle: AudioStreamPlayer2D = $Shuffle
+@onready var shuffle_delay_timer: Timer = $Shuffle/ShuffleDelayTimer
+
 func _ready() -> void:
 	cardValue = randi_range(0,12)
 	cardSymbol = randi_range(0,3)
@@ -33,6 +36,8 @@ func _ready() -> void:
 	if isCorner:
 		hasBeenTurned = true
 		animation_player.play("flip")
+	
+	shuffle_delay_timer.timeout.connect(play_shuffle_sound)
 
 func _process(delta: float) -> void:
 	hasTurnedNeighbours = false
@@ -167,6 +172,7 @@ func _on_area_3d_mouse_entered() -> void:
 	if not hasBeenTurned and hasTurnedNeighbours:
 		animation_player.play("hover")
 		mouseIsOn = true;
+		shuffle_delay_timer.start()
 		
 		master.stateOfCurrentCard = getAmountOfTurnedNeighbours().x
 
@@ -176,3 +182,7 @@ func _on_area_3d_mouse_exited() -> void:
 		mouseIsOn = false 
 
 		master.stateOfCurrentCard = 0
+
+func play_shuffle_sound():
+	shuffle.play()
+	
