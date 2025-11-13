@@ -8,7 +8,7 @@ extends Node3D
 @export var leftCard: Node 
 @export var rightCard: Node
 
-var abzugProKarte = 10
+var abzugProKarte = 1
 
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
@@ -110,7 +110,9 @@ func reset(resetid: int, eventEntry: bool) -> void:
 			master.Getti_Money -= abzugProKarte
 		else:
 			master.Bleron_Money -= abzugProKarte
-			
+		
+		if not is_inside_tree():
+			return
 		await get_tree().create_timer(0.05).timeout
 		mouseIsOn = false
 		if topCard != null:
