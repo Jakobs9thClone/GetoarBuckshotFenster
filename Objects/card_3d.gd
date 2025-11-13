@@ -28,6 +28,8 @@ var mouseIsOn = false
 @onready var flipFX = $flipFX
 var lastResetID = null
 
+
+
 func _ready() -> void:
 	cardValue = randi_range(0,12)
 	cardSymbol = randi_range(0,3)
@@ -36,6 +38,8 @@ func _ready() -> void:
 	if isCorner:
 		hasBeenTurned = true
 		animation_player.play("flip")
+	
+	
 
 func _process(delta: float) -> void:
 	hasTurnedNeighbours = false
@@ -173,6 +177,7 @@ func _on_area_3d_mouse_entered() -> void:
 		animation_player.play("hover")
 		mouseIsOn = true;
 		
+		
 		master.stateOfCurrentCard = getAmountOfTurnedNeighbours().x
 
 func _on_area_3d_mouse_exited() -> void:
@@ -181,3 +186,5 @@ func _on_area_3d_mouse_exited() -> void:
 		mouseIsOn = false 
 
 		master.stateOfCurrentCard = 0
+
+	
