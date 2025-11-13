@@ -1,5 +1,7 @@
 extends Node3D
 
+
+
 var currentPlayer = 0 #1 = Getti, 0 = Blasrohr
 var mouseGameplayBlock = false #kann auf true gestellt werden, wenn das Einsätze Menü gerade angezeigt wird
 var allowedToSwitchPlayer = false

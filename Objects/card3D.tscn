@@ -91,7 +91,7 @@ debug_Label = NodePath("Vorderseite/DebugNumber")
 cardSprite = NodePath("Vorderseite")
 
 [node name="Vorderseite" type="Sprite3D" parent="."]
-transform = Transform3D(-1, -1.5099631e-07, -6.6002586e-15, 0, 4.371139e-08, -1, -1.5099631e-07, 1, 4.371139e-08, -4.714162e-10, -0.0053923726, 0)
+transform = Transform3D(-1, -1.5099637e-07, -6.600261e-15, 0, 4.371139e-08, -1, -1.5099637e-07, 1, 4.371139e-08, -4.714162e-10, -0.0053923726, 0)
 shaded = true
 alpha_cut = 2
 texture_filter = 0
@@ -104,11 +104,10 @@ region_rect = Rect2(3, 3, 51, 79)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5.05223e-09, 0.11558154)
 billboard = 1
 texture_filter = 0
-modulate = Color(0, 0, 0, 1)
-outline_modulate = Color(1, 1, 1, 1)
+outline_render_priority = 0
 text = "12"
 font_size = 60
-outline_size = 0
+outline_size = 9
 
 [node name="Rückseite" type="Sprite3D" parent="Vorderseite"]
 transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -0.009940658, -0.0009291018, -0.0038289053)

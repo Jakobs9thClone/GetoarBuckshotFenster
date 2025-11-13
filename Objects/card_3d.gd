@@ -10,6 +10,8 @@ extends Node3D
 
 var abzugProKarte = 1
 
+var numArray = ["2","3","4","5","6","7","8","9","10","B","D","K","A"]
+
 var cardValue = 0; #max 12
 var cardSymbol = 0; #max 3
 
@@ -29,7 +31,7 @@ var lastResetID = null
 func _ready() -> void:
 	cardValue = randi_range(0,12)
 	cardSymbol = randi_range(0,3)
-	debug_Label.text = str(cardValue)
+	debug_Label.text = numArray[cardValue]
 	cardSprite.frame_coords = Vector2i(cardValue,cardSymbol)
 	if isCorner:
 		hasBeenTurned = true
@@ -107,7 +109,7 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		animation_player.play("flip_back")
 		$flipFX.play()
 		cardValue = randi_range(0,12)
-		debug_Label.text = str(cardValue)
+		debug_Label.text = numArray[cardValue]
 		if master.currentPlayer == 1:
 			master.Getti_Money -= abzugProKarte
 		else:
