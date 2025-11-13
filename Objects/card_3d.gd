@@ -23,6 +23,7 @@ var mouseIsOn = false
 
 @onready var animation_player = $AnimationPlayer
 @onready var master = get_parent()
+@onready var flipFX = $flipFX
 var lastResetID = null
 
 func _ready() -> void:
@@ -104,6 +105,7 @@ func reset(resetid: int, eventEntry: bool) -> void:
 		lastResetID = resetid
 		hasBeenTurned = false
 		animation_player.play("flip_back")
+		$flipFX.play()
 		cardValue = randi_range(0,12)
 		debug_Label.text = str(cardValue)
 		if master.currentPlayer == 1:
@@ -136,6 +138,7 @@ func _input(event):
 		elif mouseIsOn and not hasBeenTurned:
 			hasBeenTurned = true
 			animation_player.play("flip")
+			$flipFX.play()
 			var numN = getAmountOfTurnedNeighbours()
 			if event.is_action_pressed("Mouse Left"):
 				if numN.x == 1:
