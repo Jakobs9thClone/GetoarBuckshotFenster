@@ -26,7 +26,7 @@ var mouseIsOn = false
 @onready var flipFX = $flipFX
 var lastResetID = null
 
-@onready var shuffle: AudioStreamPlayer2D = $Shuffle
+
 
 func _ready() -> void:
 	cardValue = randi_range(0,12)
@@ -185,6 +185,4 @@ func _on_area_3d_mouse_exited() -> void:
 
 		master.stateOfCurrentCard = 0
 
-func play_shuffle_sound():
-	shuffle.play()
 	
