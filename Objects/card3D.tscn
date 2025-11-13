@@ -91,7 +91,7 @@ debug_Label = NodePath("Vorderseite/DebugNumber")
 cardSprite = NodePath("Vorderseite")
 
 [node name="Vorderseite" type="Sprite3D" parent="."]
-transform = Transform3D(-1, -1.5099631e-07, -6.6002586e-15, 0, 4.371139e-08, -1, -1.5099631e-07, 1, 4.371139e-08, -4.714162e-10, -0.0053923726, 0)
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, -4.714162e-10, -0.0053923726, 0)
 shaded = true
 alpha_cut = 2
 texture_filter = 0
